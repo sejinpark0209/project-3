@@ -21,17 +21,21 @@ class PostsController < ApplicationController
     @post = Post.new(post_params_create)
 
     respond_to do |format|
-      if @movie.save
-        format.html { redirect_to user_list_movies_url, notice: 'Movie was successfully created.' }
-        format.json { render :show, status: :created, location: @movie }
+      if @post.save
+        format.html { redirect_to apartment_posts_url, notice: 'Post was successfully created.' }
+        format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
-        format.json { render json: @movie.errors, status: :unprocessable_entity }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
 
-    
-  end
+  private
 
+    def post_params_create
+      params.permit(:title, :director, :synopsis, :year, :runtime, :rating, :list_id)
+    end
+
+  end
 
 end
