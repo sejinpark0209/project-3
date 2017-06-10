@@ -9,7 +9,11 @@
   </head>
 
   <body>
+<div class="row">
+  <div class="col col-md-3 col-md-offset-3">
     <h1>Project 3</h1>
+  </div>
+</div>
     <%= notice %>
     <%= alert %>
 
@@ -18,22 +22,22 @@
     <%- if user_signed_in? %>
       <strong><%= link_to('Logout', destroy_user_session_path, :method => :delete) %> </strong>
     <% else %>
-      <strong><%= link_to "Sign in", new_user_session_path %></strong>
-      <h2>Sign up</h2>
-      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-        <%= devise_error_messages! %>
+        <h2>Sign up</h2>
+        <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
 
-        <div><%= f.label :email %><br />
-        <%= f.email_field :email %></div>
+          <div><%= f.label :email %><br />
+          <%= f.email_field :email %></div>
 
-        <div><%= f.label :password %><br />
-        <%= f.password_field :password %></div>
+          <div><%= f.label :password %><br />
+          <%= f.password_field :password %></div>
 
-        <div><%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation %></div>
+          <div><%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation %></div>
 
-        <div><%= f.submit "Sign up" %></div>
-      <% end %>
+          <div><%= f.submit "Sign up" %></div>
+        <% end %>
+
       <%= render "devise/shared/links" %>
     <% end %>
 

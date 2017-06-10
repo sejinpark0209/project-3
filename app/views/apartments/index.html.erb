@@ -1,0 +1,14 @@
+<h1>Apartments</h1>
+
+
+<td><%= link_to 'New', new_apartment_path %></td>
+<tbody>
+    <% @apartments.each do |apartment| %>
+      <tr>
+        <td><%= apartment.name %></td>
+        <td><%= link_to 'Show', apartment_path(apartment.id) %></td>
+        <td><%= link_to 'Edit', apartment_path(apartment.id) %></td>
+        <td><%= link_to 'Destroy', apartment_path(apartment.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
