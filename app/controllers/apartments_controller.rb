@@ -9,6 +9,7 @@ class ApartmentsController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
     apartment_id = params[:id]
     @apartment = Apartment.find_by_id(apartment_id)
     render :show
