@@ -31,7 +31,14 @@ class ApartmentsController < ApplicationController
   end
 
 
-
+# <% num = 0 %>
+# <% count = 1 %>
+# <% apartment.post.each do |post| %>
+# <% count += 1 %>
+# <% num += post.p_ref_fee %>
+# <% end %>
+# <%= num / count - 1%>
+# <%= count %>
 
 
   private

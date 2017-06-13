@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 
   def index
     @apartment = Apartment.find(params[:apartment_id])
-    @posts = Post.all
+    @posts = @apartment.post
   end
 
   def show
@@ -26,6 +26,8 @@ class PostsController < ApplicationController
     set_apartment
     @post = Post.create(post_params)
       if @post.save
+        @user.post << @post
+        @apartment.post << @post
         flash[:notice] = "Successfully created post"
         redirect_to apartment_posts_path
       else

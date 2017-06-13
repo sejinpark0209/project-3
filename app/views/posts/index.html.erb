@@ -8,7 +8,7 @@
       <tr>
         <td><%= post.contact %></td>
         <td><%= link_to 'Edit', edit_apartment_post_path(@apartment, current_user.id, post.id) %></td>
-        <td><%= link_to 'Destroy', apartment_post_path(@apartment, current_user.id, post.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', apartment_post_path(@apartment, post.user, post.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
