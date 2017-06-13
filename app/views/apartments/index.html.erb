@@ -7,6 +7,9 @@
     <% @apartments.each do |apartment| %>
       <tr>
         <td><%= apartment.name %></td>
+        <td><%= apartment.address %></td>
+        <td><%= apartment.city %></td>
+        <td><%= apartment.state %></td>
         <%= calc_price(apartment) %>
 
         <td><%= link_to 'Show', apartment_posts_path(apartment) %></td>
