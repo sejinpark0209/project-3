@@ -10,6 +10,7 @@
 
   <body>
     <div class="jumbotron">
+        <span id="sign"><%= link_to('Home', apartments_path) %></span>
       <%- if user_signed_in? %>
         <span id="sign"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %> </span>
       <% else %>
