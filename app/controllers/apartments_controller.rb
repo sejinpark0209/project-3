@@ -1,8 +1,8 @@
 class ApartmentsController < ApplicationController
 
   def index
-      #compare the name with your parameter
-      @apartments = Apartment.where(["name LIKE ?","%#{params[:search]}%"])
+    #compare the name with your parameter
+    @apartments = Apartment.where(["name LIKE ?","%#{params[:search]}%"])
   end
 
   def new

@@ -42,6 +42,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 # google maps api gems
 gem 'geocoder'
 gem 'gmaps4rails'
+gem 'underscore-rails'
 
 
 

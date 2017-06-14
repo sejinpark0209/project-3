@@ -1,9 +1,8 @@
 <h1>Apartments</h1>
 
-
 <span class="addApt"><%= link_to 'Add New Apartment', new_apartment_path, :class => "new-apt-link" %></span>
 
-<tbody>
+<body>
   <div class="row">
     <% @apartments.each do |apartment| %>
     <div class="col-sm-4">
@@ -35,4 +34,6 @@
 
     <% end %>
   </div>
-</tbody>
+
+
+</body>
