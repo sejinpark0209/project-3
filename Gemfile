@@ -39,6 +39,11 @@ gem 'devise', '~> 4.3'
 gem 'jquery-rails', '~> 4.3.1'
 # bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
+# google maps api gems
+gem 'geocoder'
+gem 'gmaps4rails'
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
