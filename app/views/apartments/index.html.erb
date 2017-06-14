@@ -1,22 +1,38 @@
 <h1>Apartments</h1>
 
 
-  <td><%= link_to 'New', new_apartment_path %></td>
+<td><%= link_to 'New', new_apartment_path %></td>
 
 <tbody>
+  <div class="row">
     <% @apartments.each do |apartment| %>
-      <tr>
-        <td><%= apartment.name %></td>
-        <td><%= apartment.address %></td>
-        <td><%= apartment.city %></td>
-        <td><%= apartment.state %></td>
-        <%= calc_price(apartment) %>
+    <div class="col-sm-4">
+      <%= link_to apartment_posts_path(apartment) do %>
 
-        <td><%= link_to 'Show', apartment_posts_path(apartment) %></td>
-        <td><%= link_to 'Edit', edit_apartment_path(apartment.id) %></td>
-        <td><%= link_to 'Destroy', apartment_path(apartment.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+          <div class="aptName">
+            <td><%= apartment.name %></td>
+          </div>
+          <div class="aptInfo">
+            <td><%= apartment.address %></td>
+            <td><%= apartment.city %></td>
+            <td><%= apartment.state %></td>
+          </div>
+          <div class="calc_price">
+            $<%= calc_price(apartment) %>
+          </div>
+          <div class="count_post">
+          <%= count_post(apartment) %> posts
+          </div>
+          <div class="edit">
+            <td><%= link_to 'Edit', edit_apartment_path(apartment.id) %></td>
+          </div>
+          <div class="destroy">
+            <td><%= link_to 'Destroy', apartment_path(apartment.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </div>
+
+        <% end %>
+      </div>
+
     <% end %>
+  </div>
 </tbody>
-
-<%= console %>

@@ -14,6 +14,14 @@ module ApartmentsHelper
     end
   end
 
+  def count_post apartment
+    count = 0
+    apartment.post.each do |post|
+      count += 1
+    end
+    count
+  end
+
   def us_states
     [
       ['Alabama', 'AL'],

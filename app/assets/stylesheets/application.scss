@@ -1,5 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Reenie+Beanie');
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow|Pangolin|Pathway+Gothic+One');
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -14,3 +16,61 @@
  * It is generally better to create a new file per style scope.
  *
  */
+
+body {
+    background-color: #AF9E93;
+
+}
+
+#sign {
+  font-size: 20px;
+  float: right;
+  color: white;
+  margin: 0 10px;
+  font-family: 'Archivo Narrow', sans-serif;
+}
+
+.col-sm-4{
+
+
+}
+
+.aptName {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 30px;
+  color: black;
+}
+
+.aptInfo {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 15px;
+  color: black;
+}
+
+.calc_price {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 30px;
+  color: black;
+}
+
+.display-3 {
+  font-family: 'Reenie Beanie', cursive;
+  color: white;
+  font-weight: 600;
+  font-size: 100px;
+  text-align: center;
+}
+
+.col-sm-4 {
+
+}
+
+.jumbotron {
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: 50% 77%;
+  background-size: cover;
+  margin: auto;
+  background-image: url(brown.jpg);
+  z-index: 100;
+}
