@@ -2,7 +2,7 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Reenie+Beanie');
 @import url('https://fonts.googleapis.com/css?family=Archivo+Narrow|Pangolin|Pathway+Gothic+One');
-
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400');
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -18,8 +18,54 @@
  */
 
 body {
-    background-color: #AF9E93;
+  font-family: 'Lato', sans-serif;
+  background-color: #e2dedb;
+  color: #b3aca7;
+}
 
+#signup {
+  position: relative;
+  margin: 100px 0 25px 0;
+  font-size: 2.3em;
+  text-align: center;
+  letter-spacing: 7px;
+}
+
+#signup-form {
+	padding-bottom: 88px;
+	padding-top: 80px;
+	padding-left: 150px;
+	padding-right: 150px;
+
+	.actions {
+		color: black;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+
+
+#form {
+  position: relative;
+  width: 500px;
+  margin: 50px auto 100px auto;
+}
+
+
+#button {
+  width: 502px;
+  padding: 0;
+  margin: -5px 0px 0px 0px;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  color: #b3aca7;
+  outline:none;
+  cursor: pointer;
+  border: solid 1px #b3aca7;
+  border-top: none;
+}
+#button:hover {
+  color: #e2dedb;
 }
 
 #sign {
