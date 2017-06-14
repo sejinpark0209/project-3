@@ -31,25 +31,50 @@ body {
 }
 
 .col-sm-4{
-
+  border-style: solid;
+  color: #AA632C;
+  border-width: 10px;
+  margin: 10px;
 
 }
 
-.aptName {
+#aptName {
   font-family: 'Pathway Gothic One', sans-serif;
   font-size: 30px;
   color: black;
 }
 
-.aptInfo {
+#aptInfo {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 15px;
+  color: black;
+  float: right;
+}
+
+.calc_price {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 60px;
+  color: black;
+  text-align: center;
+  margin: 50px;
+}
+
+.count_post {
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 15px;
+  color: black;
+  float: right;
+}
+
+.edit {
   font-family: 'Pathway Gothic One', sans-serif;
   font-size: 15px;
   color: black;
 }
 
-.calc_price {
+.destroy {
   font-family: 'Pathway Gothic One', sans-serif;
-  font-size: 30px;
+  font-size: 15px;
   color: black;
 }
 
