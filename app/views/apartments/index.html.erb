@@ -1,7 +1,7 @@
 <h1>Apartments</h1>
 
 
-<span class="addApt"><%= link_to 'Add New Apartment', new_apartment_path %></span>
+<span class="addApt"><%= link_to 'Add New Apartment', new_apartment_path, :class => "new-apt-link" %></span>
 
 <tbody>
   <div class="row">
@@ -24,10 +24,10 @@
           <%= count_post(apartment) %> posts
           </div>
           <div class="edit">
-            <td><%= link_to 'Edit', edit_apartment_path(apartment.id) %></td>
+            <td><%= link_to 'Edit', edit_apartment_path(apartment.id), :class => "apt-link" %></td>
           </div>
           <div class="destroy">
-            <td><%= link_to 'Destroy', apartment_path(apartment.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Destroy', apartment_path(apartment.id), :class => "apt-link", method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </div>
 
         <% end %>

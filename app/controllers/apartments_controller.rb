@@ -16,6 +16,17 @@ class ApartmentsController < ApplicationController
     render :show
   end
 
+  def edit
+    @apartment = Apartment.find(params[:id])
+  end
+
+  def update
+    @apartment = Apartment.find(params[:id])
+    @apartment.update_attributes(apt_params)
+    flash[:notice] = "Apartment successfully updated!"
+    redirect_to apartments_url
+  end
+
   def create
     apartment = Apartment.create(apt_params)
     redirect_to apartments_path
