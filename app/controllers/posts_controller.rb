@@ -48,9 +48,14 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
     @apartment = Apartment.find(params[:apartment_id])
     @post = Post.find(params[:id])
-    @post.update_attributes(post_params)
-    flash[:notice] = "Post successfully updated!"
-    redirect_to apartment_posts_url
+    if @user == current_user
+      @post.update_attributes(post_params)
+      flash[:notice] = "Post successfully updated!"
+      redirect_to apartment_posts_url
+    else
+      redirect_to apartment_posts_url
+      flash[:notice] = "Sorry, you can only edit your own posts!"
+    end
   end
 
   def destroy
