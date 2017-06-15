@@ -20,13 +20,13 @@
         <% end %>
       </div>
     <div class="display-3"> Referral </div>
-    <div class="search-form">
-      <%= form_tag apartments_path, :method => 'get' do %>
+
+      <%= form_tag apartments_path, :method => 'get', class: "search-tag" do %>
         <!-- pass the search parameter as a value into text field. second field is whatever goes into text field -->
-        <%= text_field_tag :search, params[:search] %>
-        <%= submit_tag "Search" %>
+        <%= text_field_tag :search, params[:search], class: "text-tag" %>
+        <%= submit_tag "Search", class: "submit-tag" %>
       <% end %>
-    </div>
+
   </div>
     <%= notice %>
     <%= alert %>

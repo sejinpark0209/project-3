@@ -90,6 +90,34 @@ span#sign {
   margin-top: 50px;
 }
 
+.search-tag {
+  width:370px;
+  margin:50px auto;
+}
+
+.text-tag {
+  width:280px;
+  padding:8px 15px;
+  background:#F3F1ED;
+  color: black;
+  border:0px solid #dbdbdb;
+}
+
+.submit-tag {
+  position:relative;
+  padding:7px 16px;
+  left: 5px;
+  border:2px solid #207cca;
+  background-color:#207cca;
+  color:#fafafa;
+}
+
+.submit-tag:hover {
+  background-color:#fafafa;
+  color:#207cca;
+}
+
+
 .post-apt-info {
   font-family: 'Archivo Narrow', sans-serif;
   font-size: 30px;
