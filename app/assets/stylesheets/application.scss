@@ -31,10 +31,13 @@ body {
   letter-spacing: 7px;
 }
 
-.addApt {
+
+span.addApt {
   font-family: 'Lato', sans-serif;
   font-size: 15px;
   color: black;
+  float: right;
+  margin-right: 50px;
 }
 
 #signup-form {
@@ -124,8 +127,20 @@ a.new-apt-link {
   border-style: solid;
   color: #AA632C;
   border-width: 10px;
-  margin: 10px;
+  display: inline-block;
+  width: 495px;
+  margin-top: 15px;
+  margin-left: 50px;
+  margin-bottom: 15px;
+  float: none;
+}
 
+.col-md-6 {
+  border-style: solid;
+  color: #AA632C;
+  border-width: 10px;
+  margin-bottom: 15px;
+  background-color: white;
 }
 
 #aptName {

@@ -1,19 +1,19 @@
 <%= form_for @post, :url => { :action => "create"} do |f| %>
   <div class="form-group">
-    <%= f.label :contact %><br />
+    <%= f.label :contact, 'Enter Contact Info' %><br />
     <%= f.text_field :contact, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :referral_fee %><br />
+    <%= f.label :p_ref_fee, 'Referral Fee' %><br />
     <%= f.text_field :p_ref_fee, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :How_much_will_you_keep? %><br />
+    <%= f.label :ratio_me, 'How much will you keep?' %><br />
     <%= f.text_field :ratio_me, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :Expiration_Date %><br />
-    <%= f.text_field :exp_date, class: "form-control" %>
+    <%= f.label :exp_date, 'Expiration Date (MM/DD/YYYY)' %><br />
+    <%= f.text_field :exp_date, class: "form-control" %><br />
   </div>
   <div class="form-group">
     <%= f.submit "Save", class: "btn btn-block btn-success" %>

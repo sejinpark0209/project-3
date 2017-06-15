@@ -2,6 +2,13 @@ class PostsController < ApplicationController
 
   def index
     @apartment = Apartment.find(params[:apartment_id])
+    @hash = Gmaps4rails.build_markers(@apartment) do |apartment, marker|
+      marker.lat apartment.latitude
+      marker.lng apartment.longitude
+      marker.title apartment.name
+      marker.infowindow render_to_string(:partial => "/apartments/info",
+       :locals => { :apartment => apartment}) # allows use of |event| in partial
+    end
     @posts = @apartment.post
   end
 
