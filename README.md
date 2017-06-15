@@ -1,24 +1,41 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+project-03- Referral - https://murmuring-waters-54697.herokuapp.com/
 
-Things you may want to cover:
+Users who are trying to move in and currently living in can have free money from the apartment.(referral fee)
+The people who are currently living in an apartment will post their information with how much he/she is willing to split money with people who are coming in. When user log in, they will be able to search the apartment and see the deal.
 
-* Ruby version
 
-* System dependencies
+## Technologies Used
 
-* Configuration
+jQuery
+HTML
+CSS
+rails 5.1.1
+ruby 2.4.0
+gem 'bootstrap-sass' - for bootstrap
+gem ‘devise’ - user authentication
+gem 'geocoder' - to convert address to coordinates
+gem 'gmaps4rails' - allows us to use google maps api
 
-* Database creation
 
-* Database initialization
+## List of installation steps
+//create new rails app no testing and use postgresql as database
+rails new app -T -d postgresql
+//create database
+rails db:create
+//after creating models,
+rails db:migrate
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Link to User stories, wireframes and entity relationship diagrams
 
-* Deployment instructions
+- https://trello.com/b/D2x25So9
 
-* ...
+
+## unsolved problems or future features
+
+Email confirmation for sign up (devise)
+Sorting button such as descending order with price(referral price)
+Validate error message in form
+CSS
