@@ -135,6 +135,11 @@ span#sign {
   background-color: #555555;
 }
 
+h2.sig {
+    text-align: center;
+}
+
+
 .link {
   font-size: 20px;
   color: black;
@@ -190,6 +195,11 @@ a.new-apt-link {
   border-width: 10px;
   margin-bottom: 15px;
   background-color: white;
+}
+
+.field, .logi, .remember {
+  width: 70%;
+  margin: 0 auto;
 }
 
 #aptName {
@@ -261,7 +271,7 @@ a.new-apt-link {
 }
 
 .form-group {
-  width: 50%;
+  width: 70%;
   margin: auto;
 }
 

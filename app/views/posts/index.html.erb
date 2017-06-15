@@ -9,7 +9,7 @@
 <% if signed_in? %>
   <div class="addApt"><%= link_to 'New', new_apartment_post_path(@apartment, current_user.id), :class => "btn btn-info btn-lg" %></div>
 <% else %>
-  <h2>Please Log In to view or create Posts</h2>
+  <h2>Please Log In to create Posts</h2>
 <% end %>
 
 <div style='width: 800px;'>
@@ -41,7 +41,7 @@
         <div class="count_post">
           <td>Expires <%= post.exp_date %></td>
         </div>
-        <td><%= link_to 'Edit', edit_apartment_post_path(@apartment, current_user.id, post.id), :class => "link" %></td>
+        <td><%= link_to 'Edit', edit_apartment_post_path(@apartment, post.user, post.id), :class => "link" %></td>
         <td><%= link_to 'Delete', apartment_post_path(@apartment, post.user, post.id), :class => "link", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </div>
     </div>

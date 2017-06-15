@@ -55,7 +55,7 @@ apartment_8 = Apartment.create({
     state: "CA"
     })
 apartment_9 = Apartment.create({
-    name: "Kevin's Lofts",
+    name: "Kevin's Nest",
     address: "Montgomery Station, San Francisco",
     state: "CA"
     })
@@ -145,7 +145,7 @@ post_14 = Post.create({
       exp_date: "09/12/2017"
     })
 post_15 = Post.create({
-      contact: "Kevin@Tse.com",
+      contact: "Griddle@Meat.com",
       p_ref_fee: 10,
       ratio_me: 9,
       exp_date: "07/15/2018"

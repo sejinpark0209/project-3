@@ -9,7 +9,8 @@
 
     <% @apartments.each do |apartment| %>
     <div class="col-sm-4">
-      <%= link_to apartment_posts_path(apartment) do %>
+
+        <%= link_to apartment_posts_path(apartment) do %>
 
           <div class="col-xs-6" id="aptName">
             <td><%= apartment.name %></td>

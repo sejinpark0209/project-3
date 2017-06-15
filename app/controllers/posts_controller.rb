@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :log_in, only: [:index]
 
   def index
     @apartment = Apartment.find(params[:apartment_id])
@@ -26,6 +27,12 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
     @apartment = Apartment.find(params[:apartment_id])
     @post = Post.find(params[:id])
+    if @user == current_user
+      redirect_to edit_apartment_post_url
+    else
+      redirect_to apartment_posts_url
+      flash[:notice] = "Sorry, you can only edit your own posts!"
+    end
   end
 
   def create
@@ -92,5 +99,12 @@ class PostsController < ApplicationController
 
     def set_post
       @post = Post.find(params[:id])
+    end
+
+    def log_in
+      if current_user.nil?
+          redirect_to apartments_path
+          flash[:notice] = "You have to be logged in to see Posts"
+        end
     end
 end
