@@ -12,16 +12,22 @@
     <div class="jumbotron">
       <div class="log pull-right">
         <span id="sign"><%= link_to('Home', apartments_path, :class => "link") %></span>
-      <%- if user_signed_in? %>
-        <span id="sign"><%= link_to('Logout', destroy_user_session_path, :class => "link", :method => :delete) %> </span>
-      <% else %>
-        <span id="sign"><%= link_to('Log In', new_user_session_path, :class => "link") %></span>
-        <span id="sign"><%= link_to('Sign Up', new_user_registration_path, :class => "link") %></span>
+        <%- if user_signed_in? %>
+          <span id="sign"><%= link_to('Logout', destroy_user_session_path, :class => "link", :method => :delete) %> </span>
+        <% else %>
+          <span id="sign"><%= link_to('Log In', new_user_session_path, :class => "link") %></span>
+          <span id="sign"><%= link_to('Sign Up', new_user_registration_path, :class => "link") %></span>
+        <% end %>
+      </div>
+    <div class="display-3"> Referral </div>
+    <div class="search-form">
+      <%= form_tag apartments_path, :method => 'get' do %>
+        <!-- pass the search parameter as a value into text field. second field is whatever goes into text field -->
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search" %>
       <% end %>
     </div>
-    <div class="display-3"> Referral </div>
-
-      </div>
+  </div>
     <%= notice %>
     <%= alert %>
 

@@ -4,7 +4,6 @@ class ApartmentsController < ApplicationController
 
     #compare the name with your parameter
     @apartments = Apartment.where(["name LIKE ?","%#{params[:search]}%"])
-
   end
 
   def new
