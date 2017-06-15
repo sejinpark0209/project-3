@@ -1,16 +1,10 @@
 class ApartmentsController < ApplicationController
 
   def index
-    @apartments = Apartment.all
+
     #compare the name with your parameter
-    # @apartments = Apartment.where(["name LIKE ?","%#{params[:search]}%"])
-    @hash = Gmaps4rails.build_markers(@apartments) do |apartment, marker|
-      marker.lat apartment.latitude
-      marker.lng apartment.longitude
-      marker.title apartment.name
-     marker.infowindow render_to_string(:partial => "/apartments/info",
-       :locals => { :apartment => apartment}) # allows use of |event| in partial
-    end
+    @apartments = Apartment.where(["name LIKE ?","%#{params[:search]}%"])
+
   end
 
   def new
@@ -64,7 +58,7 @@ class ApartmentsController < ApplicationController
   private
 
   def apt_params
-    params.require(:apartment).permit(:name, :address, :city, :state, :ref_fee, :num_post)
+    params.require(:apartment).permit(:name, :address,:state, :ref_fee, :num_post)
   end
 
 end

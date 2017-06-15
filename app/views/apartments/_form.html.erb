@@ -4,16 +4,12 @@
     <%= f.text_field :name, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :address %><br />
+    <%= f.label :address, 'Address (Please include City)' %><br />
     <%= f.text_field :address, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :city %><br />
-    <%= f.text_field :city, class: "form-control" %>
-  </div>
-  <div class="form-group">
     <%= f.label :state %><br />
-    <%= f.select :state, options_for_select(us_states) %>
+    <%= f.select :state, options_for_select(us_states) %><br />
   </div>
   <div class="form-group">
     <%= f.submit "Save", class: "btn btn-block btn-success" %>
