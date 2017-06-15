@@ -1,16 +1,16 @@
 module ApartmentsHelper
 
   def calc_price apartment
-    num = 0
-    count = 0
+    avg_price = 0
+    post_count = 0
     apartment.post.each do |post|
-      count += 1
-      num += post.p_ref_fee
+      post_count += 1
+      avg_price += post.p_ref_fee
     end
-    if(count == 0)
+    if(post_count == 0)
       0
     else
-      num/count
+      avg_price/post_count
     end
   end
 
